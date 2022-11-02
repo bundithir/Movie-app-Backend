@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const port = 1234
+const PORT = process.env.PORT
 const bcrypt = require('bcryptjs');
 const cors = require('cors');
 const db = require('knex')({
@@ -81,4 +81,4 @@ app.post('/register',(req,res)=>{
 
 })
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))
